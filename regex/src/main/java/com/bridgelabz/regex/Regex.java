@@ -43,8 +43,8 @@ public class Regex {
 		} else {
 			System.out.println("False");
 		}
-		// Check 8 character password
-		if (Pattern.matches("^[A-Za-z1-8]{8}", password)) {
+		// Password at least one upper case
+		if (Pattern.matches("^[A-Z]+[a-z].{7}", password)) {
 			System.out.println("True");
 		} else {
 			System.out.println("False");
