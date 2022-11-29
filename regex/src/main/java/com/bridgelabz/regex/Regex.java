@@ -43,8 +43,8 @@ public class Regex {
 		} else {
 			System.out.println("False");
 		}
-		// Numeric number in password
-		if (Pattern.matches("^[A-Z][a-z0-9]{7}", password)) {
+		// Special Character Password
+		if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", password)) {
 			System.out.println("True");
 		} else {
 			System.out.println("False");
