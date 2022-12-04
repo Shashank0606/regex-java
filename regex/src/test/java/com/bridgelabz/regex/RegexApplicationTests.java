@@ -9,7 +9,7 @@ class RegexApplicationTests {
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidFirstName("Sam");
+		boolean result = userInputValidation.isValidFirstName("Dipali");
 		Assert.assertEquals(true, result);
 	}
 
@@ -23,7 +23,7 @@ class RegexApplicationTests {
 	@Test
 	public void givenLastName_WhenProper_ShouldReturnTrue() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidLastName("Rathore");
+		boolean result = userInputValidation.isValidLastName("Sonawane");
 		Assert.assertEquals(true, result);
 	}
 
@@ -37,14 +37,28 @@ class RegexApplicationTests {
 	@Test
 	public void givenEmail_WhenValid_ShouldReturnTrue() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidEmail("ShashankRathore606@gmail.com");
+		boolean result = userInputValidation.isValidEmail("kunalsonawane730@gmail.com");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void givenEmail_WhenNotValid_ShouldReturnFalse() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidEmail("Shashank...gmail.com");
+		boolean result = userInputValidation.isValidEmail("Kunalsonawane..675.gmail.com");
+		Assert.assertEquals(false, result);
+	}
+
+	@Test
+	public void givenMobileNum_WhenProper_ShouldReturnTrue() {
+		UserInputValidation userInputValidation = new UserInputValidation();
+		boolean result = userInputValidation.isValidMobileNumber("91 9087654321");
+		Assert.assertEquals(true, result);
+	}
+
+	@Test
+	public void givenMobileNum_WhenNotProper_ShouldReturnFalse() {
+		UserInputValidation userInputValidation = new UserInputValidation();
+		boolean result = userInputValidation.isValidMobileNumber("908765-4321908");
 		Assert.assertEquals(false, result);
 	}
 }
