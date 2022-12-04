@@ -7,7 +7,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 class RegexApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void givenFirstName_WhenProper_ShouldReturnTrue() {
+		UserInputValidation userInputValidation = new UserInputValidation();
+		boolean result = UserInputValidation.isValidFirstName("Dipali");
+		Assert.assertEquals(true, result);
+	}
+
+	@Test
+	public void givenFirstName_WhenShort_ShouldReturnFalse() {
+		UserInputValidation userInputValidation = new UserInputValidation();
+		boolean result = UserInputValidation.isValidFirstName("Pr");
+		Assert.assertEquals(false, result);
 	}
 
 }
