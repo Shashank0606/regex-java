@@ -16,4 +16,14 @@ public class UserInputValidation {
 
         return matcher.matches();
     }
+
+    public static boolean isValidLastName(String lastName) {
+        String firstNameRegex = "[A-Z]{1}[a-z]{2,}";
+
+        Pattern pattern = Pattern.compile(firstNameRegex);
+
+        Matcher matcher = pattern.matcher(lastName);
+
+        return matcher.matches();
+    }
 }
