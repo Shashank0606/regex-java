@@ -9,7 +9,7 @@ class RegexApplicationTests {
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidFirstName("Dipali");
+		boolean result = userInputValidation.isValidFirstName("Sam");
 		Assert.assertEquals(true, result);
 	}
 
@@ -23,42 +23,42 @@ class RegexApplicationTests {
 	@Test
 	public void givenLastName_WhenProper_ShouldReturnTrue() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidLastName("Sonawane");
+		boolean result = userInputValidation.isValidLastName("Shashank");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void givenLastName_WhenShort_ShouldReturnFalse() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidLastName("So");
+		boolean result = userInputValidation.isValidLastName("ra");
 		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void givenEmail_WhenValid_ShouldReturnTrue() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidEmail("kunalsonawane730@gmail.com");
+		boolean result = userInputValidation.isValidEmail("shashankrathore@gmail.com");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void givenEmail_WhenNotValid_ShouldReturnFalse() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidEmail("Kunalsonawane..675.gmail.com");
+		boolean result = userInputValidation.isValidEmail("shashankrathore..606.gmail.com");
 		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void givenMobileNum_WhenProper_ShouldReturnTrue() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidMobileNumber("91 9087654321");
+		boolean result = userInputValidation.isValidMobileNumber("91 8696710796");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void givenMobileNum_WhenNotProper_ShouldReturnFalse() {
 		UserInputValidation userInputValidation = new UserInputValidation();
-		boolean result = userInputValidation.isValidMobileNumber("908765-4321908");
+		boolean result = userInputValidation.isValidMobileNumber("86967-10796");
 		Assert.assertEquals(false, result);
 	}
 }
